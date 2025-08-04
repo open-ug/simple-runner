@@ -22,12 +22,12 @@ jobs:
         run: go mod tidy
 
       - name: Build Conveyor
-        run: go build -o build/runner
+        run: go build -o build/runner-linux-amd64
 
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            build/runner-${{ github.event.release.tag_name }}-linux-amd64
+            build/runner-linux-amd64
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
