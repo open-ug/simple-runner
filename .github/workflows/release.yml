@@ -6,7 +6,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            ext: ""
+          - os: macos-latest
+            ext: ""
 
     steps:
       - name: Check out code
@@ -22,12 +30,12 @@ jobs:
         run: go mod tidy
 
       - name: Build Conveyor
-        run: go build -o build/runner-linux-amd64
+        run: go build -o build/runner-${{ github.event.release.tag_name }}-${{ matrix.os }}-${{ runner.arch }}
 
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            build/runner-linux-amd64
+            build/runner-${{ github.event.release.tag_name }}-${{ matrix.os }}-${{ runner.arch }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
