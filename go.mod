@@ -4,7 +4,7 @@ go 1.23.5
 
 require (
 	github.com/docker/docker v25.0.1+incompatible
-	github.com/open-ug/conveyor v0.2.1
+	github.com/open-ug/conveyor v0.3.0
 )
 
 require (
@@ -40,7 +40,6 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.1.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/jonboulle/clockwork v0.5.0 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
