@@ -1,6 +1,6 @@
 # runner
 
-A simple [Coveyor CI](https://conveyor.open.ug/) set of drivers [driver](https://conveyor.open.ug/docs/concepts/drivers) that builds flutter applications into `apk`.
+A simple [Conveyor CI](https://conveyor.open.ug/) set of [drivers](https://conveyor.open.ug/docs/concepts/drivers) that builds flutter applications into `apk`.
 
 ## Usage
 
