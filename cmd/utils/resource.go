@@ -33,22 +33,6 @@ var FlutterBuilderResourceDefinition = &t.ResourceDefinition{
 	},
 }
 
-type PipelineResource struct {
-	Name     string               `json:"name"`
-	Resource string               `json:"resource"`
-	Spec     PipelineResourceSpec `json:"spec"`
-}
-
-type PipelineResourceSpec struct {
-	Image string         `json:"image"`
-	Steps []PipelineStep `json:"steps"`
-}
-
-type PipelineStep struct {
-	Name    string `json:"name"`
-	Command string `json:"command"`
-}
-
 type FlutterBuilderResourceSpec struct {
 	Repository string                      `json:"repository"`
 	Env        []FlutterBuilderResourceEnv `json:"env"`
